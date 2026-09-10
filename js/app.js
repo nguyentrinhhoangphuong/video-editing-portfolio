@@ -414,6 +414,29 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key === "Escape") closeLightbox();
   });
 
+  /* ---------- Light / Dark mode ---------- */
+  var themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    var syncThemeLabel = function () {
+      var isLight = document.documentElement.getAttribute("data-theme") === "light";
+      themeToggle.setAttribute(
+        "aria-label",
+        isLight ? "Chuyển sang giao diện tối" : "Chuyển sang giao diện sáng"
+      );
+    };
+    syncThemeLabel();
+    themeToggle.addEventListener("click", function () {
+      var root = document.documentElement;
+      var current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+      var next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("theme", next);
+      } catch (e) {}
+      syncThemeLabel();
+    });
+  }
+
   /* ---------- Header scroll ---------- */
   var header = document.getElementById("header");
   window.addEventListener("scroll", function () {

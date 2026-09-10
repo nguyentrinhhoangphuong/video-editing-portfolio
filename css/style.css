@@ -12,6 +12,44 @@
   --color-gradient: linear-gradient(135deg, #a78bfa 0%, #7c3aed 45%, #ff6b4a 100%);
   --radius: 2rem;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+  /* Chrome trang (đổi theo theme) */
+  --color-header-bg: rgba(10, 10, 15, 0.72);
+  --color-header-bg-scrolled: rgba(10, 10, 15, 0.88);
+  --color-eyebrow-bg: rgba(18, 18, 26, 0.6);
+  --color-nav-mobile-bg: rgba(10, 10, 15, 0.97);
+
+  /* Vùng video/lightbox: luôn giữ nền tối kiểu rạp chiếu phim ở cả 2 theme */
+  --color-media-bg: #0a0a0f;
+  --color-lightbox-bg: rgba(6, 6, 10, 0.9);
+  --color-close-bg: rgba(18, 18, 26, 0.6);
+  --color-watch-bg: rgba(10, 10, 15, 0.6);
+  --color-play-bg: rgba(10, 10, 15, 0.55);
+  --color-poster-overlay-1: rgba(10, 10, 15, 0.15);
+  --color-poster-overlay-2: rgba(10, 10, 15, 0.55);
+  --color-yt-overlay-1: rgba(10, 10, 15, 0.2);
+  --color-yt-overlay-2: rgba(10, 10, 15, 0.72);
+  --color-on-dark: #eceef5;
+  --color-on-dark-muted: #9aa2b5;
+}
+
+/*================================================= Light mode ==========================================*/
+:root[data-theme="light"] {
+  --color-bg: #f7f6fb;
+  --color-surface: #ffffff;
+  --color-surface-2: #f0eef8;
+  --color-border: rgba(20, 20, 35, 0.1);
+  --color-text: #1c1c26;
+  --color-muted: #5c6178;
+  --color-primary: #7c3aed;
+  --color-primary-soft: rgba(124, 58, 237, 0.1);
+  --color-accent: #e0532f;
+  --shadow: 0 20px 60px rgba(30, 20, 60, 0.12);
+
+  --color-header-bg: rgba(255, 255, 255, 0.75);
+  --color-header-bg-scrolled: rgba(255, 255, 255, 0.92);
+  --color-eyebrow-bg: rgba(255, 255, 255, 0.75);
+  --color-nav-mobile-bg: rgba(255, 255, 255, 0.98);
 }
 
 /*================================================= Base ==========================================*/
@@ -27,6 +65,7 @@ body {
   background-color: var(--color-bg);
   line-height: 1.6;
   overflow-x: clip;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 * {
   margin: 0;
@@ -183,7 +222,7 @@ section[id] {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(10, 10, 15, 0.72);
+  background: var(--color-header-bg);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
@@ -191,7 +230,7 @@ section[id] {
 }
 .header.scrolled {
   border-bottom-color: var(--color-border);
-  background: rgba(10, 10, 15, 0.88);
+  background: var(--color-header-bg-scrolled);
 }
 .header__inner {
   display: flex;
@@ -275,6 +314,42 @@ section[id] {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/*================================================= Theme toggle ==========================================*/
+.theme-toggle {
+  position: absolute;
+  top: 2.2rem;
+  left: 2rem;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease,
+    background 0.25s ease;
+}
+.theme-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+.theme-toggle__icon {
+  grid-area: 1 / 1;
+}
+.theme-toggle__icon--moon {
+  display: none;
+}
+:root[data-theme="light"] .theme-toggle__icon--sun {
+  display: none;
+}
+:root[data-theme="light"] .theme-toggle__icon--moon {
+  display: block;
+}
+
 /*================================================= Hero ==========================================*/
 .hero {
   min-height: 100vh;
@@ -322,7 +397,7 @@ section[id] {
   padding: 0.9rem 2rem;
   border: 1px solid var(--color-border);
   border-radius: 999px;
-  background: rgba(18, 18, 26, 0.6);
+  background: var(--color-eyebrow-bg);
 }
 .hero__title {
   font-size: clamp(4rem, 8.5vw, 8.2rem);
@@ -540,7 +615,7 @@ section[id] {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 15, 0.15), rgba(10, 10, 15, 0.55));
+  background: linear-gradient(180deg, var(--color-poster-overlay-1), var(--color-poster-overlay-2));
   transition: opacity 0.3s ease;
 }
 .project__poster:hover::before {
@@ -555,7 +630,7 @@ section[id] {
   place-items: center;
   border-radius: 50%;
   color: #fff;
-  background: rgba(10, 10, 15, 0.55);
+  background: var(--color-play-bg);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -685,7 +760,7 @@ section[id] {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(6, 6, 10, 0.9);
+  background: var(--color-lightbox-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   opacity: 0;
@@ -707,8 +782,8 @@ section[id] {
   place-items: center;
   border-radius: 50%;
   border: 1px solid var(--color-border);
-  background: rgba(18, 18, 26, 0.6);
-  color: var(--color-text);
+  background: var(--color-close-bg);
+  color: var(--color-on-dark);
   cursor: pointer;
   transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
@@ -769,14 +844,14 @@ section[id] {
   display: grid;
   place-items: center;
   font-size: 1.5rem;
-  color: var(--color-muted);
-  background: var(--color-bg);
+  color: var(--color-on-dark-muted);
+  background: var(--color-media-bg);
 }
 .yt-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 15, 0.2), rgba(10, 10, 15, 0.72));
+  background: linear-gradient(180deg, var(--color-yt-overlay-1), var(--color-yt-overlay-2));
 }
 .yt-card__watch {
   position: relative;
@@ -786,7 +861,7 @@ section[id] {
   gap: 1.2rem;
   padding: 1.5rem 3rem;
   border-radius: 999px;
-  background: rgba(10, 10, 15, 0.6);
+  background: var(--color-watch-bg);
   border: 1px solid rgba(255, 255, 255, 0.25);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -803,10 +878,10 @@ section[id] {
   margin-top: 1.8rem;
   text-align: center;
   font-size: 1.5rem;
-  color: var(--color-muted);
+  color: var(--color-on-dark-muted);
 }
 .lightbox__caption strong {
-  color: var(--color-text);
+  color: var(--color-on-dark);
   font-family: "Space Grotesk", sans-serif;
 }
 .lightbox__open {
@@ -867,7 +942,7 @@ section[id] {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(10, 10, 15, 0.97);
+    background: var(--color-nav-mobile-bg);
     border-bottom: 1px solid var(--color-border);
     padding: 9.5rem 2rem 2.4rem;
     transform: translateY(-120%);
