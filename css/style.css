@@ -317,13 +317,13 @@ section[id] {
 /*================================================= Theme toggle ==========================================*/
 .theme-toggle {
   position: absolute;
-  top: 2.2rem;
+  top: 16px;
   left: 2rem;
   z-index: 5;
   display: grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid var(--color-border);
   background: var(--color-surface);
@@ -398,6 +398,9 @@ section[id] {
   border: 1px solid var(--color-border);
   border-radius: 999px;
   background: var(--color-eyebrow-bg);
+}
+.hero__eyebrow-break {
+  display: none;
 }
 .hero__title {
   font-size: clamp(4rem, 8.5vw, 8.2rem);
@@ -989,6 +992,14 @@ section[id] {
     padding: 0.7rem 1.3rem;
     border: none;
     background: none;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .hero__eyebrow-dot {
+    display: none;
+  }
+  .hero__eyebrow-break {
+    display: block;
   }
   .hero__title {
     font-size: 3.4rem;
