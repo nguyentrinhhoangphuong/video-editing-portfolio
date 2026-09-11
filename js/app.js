@@ -38,62 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
       poster: ""
     },
     {
-      title: "Video Thương Hiệu — Sunrise Cafe",
-      category: "Promotional Videos",
-      year: "2025",
-      tools: "Premiere Pro · DaVinci",
-      description: "Video giới thiệu thương hiệu ấm áp, kể câu chuyện về cội nguồn.",
-      video:
-        "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-      poster: ""
-    },
-    {
       title: "Motion Graphics",
       category: "Motion",
       year: "2026",
       tools: "After Effects · Premiere Pro · Google Earth Studio ",
       description: "Vinhomes Grand Park - Khơi nguồn chất sống tinh hoa, kiến tạo giá trị tương lai- Personal Project",
       video:'<iframe width="560" height="315" src="https://www.youtube.com/embed/snKHJ9XvK0U?si=a9O1yjz_4zH89ygX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-      poster: ""
-    },
-    {
-      title: "Reels Promotional Videos Sản Phẩm",
-      category: "Promotional Videos",
-      year: "2024",
-      tools: "Premiere Pro · CapCut",
-      description: "Chuỗi Reels/TikTok bắt trend, tối ưu 3 giây đầu để giữ chân người xem.",
-      video:
-        "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-      poster: ""
-    },
-    {
-      title: "Trailer Sự Kiện — TechFest",
-      category: "Promotional Videos",
-      year: "2023",
-      tools: "Premiere Pro · After Effects",
-      description: "Trailer sự kiện công nghệ, tăng tốc nhịp phim theo tiếng boom.",
-      video:
-        "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdown.mp4",
-      poster: ""
-    },
-        {
-      title: "Trailer Sự Kiện — TechFest",
-      category: "Promotional Videos",
-      year: "2023",
-      tools: "Premiere Pro · After Effects",
-      description: "Trailer sự kiện công nghệ, tăng tốc nhịp phim theo tiếng boom.",
-      video:
-        "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdown.mp4",
-      poster: ""
-    },
-        {
-      title: "Trailer Sự Kiện — TechFest",
-      category: "Promotional Videos",
-      year: "2023",
-      tools: "Premiere Pro · After Effects",
-      description: "Trailer sự kiện công nghệ, tăng tốc nhịp phim theo tiếng boom.",
-      video:
-        "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdown.mp4",
       poster: ""
     },
     {
