@@ -18,6 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
      ================================================= */
   var projects = [
     {
+      title: "Documentary",
+      category: "Documentary",
+      year: "2026",
+      tools: "Premiere Pro",
+      description: "EditStock Practice Project · Edited by NTHP · Personal Project",
+      video:
+        "https://www.youtube.com/watch?v=UjZNfrIV784",
+      poster: ""
+    },
+    {
       title: "Promotional Videos",
       category: "Promotional Videos",
       year: "2026",
