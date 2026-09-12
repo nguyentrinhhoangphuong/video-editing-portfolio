@@ -47,6 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
       poster: ""
     },
     {
+      title: "Cooking Show",
+      category: "Cooking Show",
+      year: "2026",
+      tools: "Premiere Pro",
+      description: "Cooking Show Editing Practice",
+      video: "https://www.youtube.com/watch?v=dKq01vitpFk",
+      poster: ""
+    },
+    {
       title: "Những video khác",
       category: "Other videos",
       year: "2026",
