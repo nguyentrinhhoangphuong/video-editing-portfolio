@@ -27,16 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://www.youtube.com/watch?v=UjZNfrIV784",
       poster: ""
     },
-    {
-      title: "Promotional Videos",
-      category: "Promotional Videos",
-      year: "2026",
-      tools: "Premiere Pro",
-      description: "Commercial & Real Estate Video Editing Showcase | [NTHP] - Personal Project",
-      video:
-        "https://www.youtube.com/watch?v=bYJqvlPfHZo",
-      poster: ""
-    },
+    // {
+    //   title: "Promotional Videos",
+    //   category: "Promotional Videos",
+    //   year: "2026",
+    //   tools: "Premiere Pro",
+    //   description: "Commercial & Real Estate Video Editing Showcase | [NTHP] - Personal Project",
+    //   video:
+    //     "https://www.youtube.com/watch?v=bYJqvlPfHZo",
+    //   poster: ""
+    // },
     {
       title: "Promotional Videos",
       category: "Promotional Videos",
