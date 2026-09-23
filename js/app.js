@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var projects = [
     {
       title: "Talk Show",
-      category: "talk-show",
+      category: "Talk Show",
       year: "2026",
       tools: "Premiere Pro",
       description: "Talk SHow Practice Project · Edited by NTHP · Personal Project",
