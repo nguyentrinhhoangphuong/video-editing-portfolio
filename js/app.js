@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   /* =================================================
-     DỰ ÁN CỦA BẠN — sửa mảng này để thêm clip riêng.
+     DỰ ÁN — sửa mảng này để thêm clip riêng.
      - title: tên dự án
      - category: nhóm (dùng cho bộ lọc)
      - year / tools: hiển thị trên thẻ
@@ -17,6 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
          fallback); file .mp4 sẽ dùng màu gradient.
      ================================================= */
   var projects = [
+    {
+      title: "Talk Show",
+      category: "talk-show",
+      year: "2026",
+      tools: "Premiere Pro",
+      description: "Talk SHow Practice Project · Edited by NTHP · Personal Project",
+      video:
+        "https://www.youtube.com/watch?v=Cp5G9IyMzsY",
+      poster: ""
+    },
     {
       title: "Documentary",
       category: "Documentary",
